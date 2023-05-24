@@ -1,0 +1,19 @@
+.container {
+    width: 80%; /* адаптивна ширина */
+    max-width: 1700px; /* максимальна ширина контейнера */
+    margin: 0 auto; 
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.panel {
+    display: inline-block;
+    width: 45%;
+    margin: 25px;
+}
+
+h1 {
+    font-size: 3vw;
+}
