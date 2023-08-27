@@ -1,4 +1,4 @@
-import Alpaca from './components/alpaca';
+import Alpaca from './components/Alpaca';
 import './App.css';
 
 function App() {
