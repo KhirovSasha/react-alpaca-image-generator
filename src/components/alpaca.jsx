@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import AlpacaArt from "./AlpacaArt";
 import {alpacaConfig} from "../utils/alpacaConfig";
 import {getImage} from "../utils/getImage";
+import  {downloadImage} from "../utils/downloadImage";
 import Button from "./Button";
 
 const Alpaca = () => {
@@ -91,6 +92,7 @@ const Alpaca = () => {
         accessories,
     };
 
+
     return (
         <div className="container">
             <div className="app">
@@ -98,8 +100,8 @@ const Alpaca = () => {
                 <div className="left">
                     <AlpacaArt attr={alpacaAttr}/>
                     <div className="blockOfButtons">
-                        <Button emoji={'🔀'}/>
-                        <Button emoji={'🌄'}/>
+                        <Button action={()=> console.log(1)} emoji={'🔀'}/>
+                        <Button action={downloadImage} emoji={'🌄'}/>
                     </div>
                 </div>
                 <div className="right">

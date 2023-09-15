@@ -1,10 +1,8 @@
 import React from "react";
 
-const Button = ({emoji}) => {
+const Button = ({emoji, action}) => {
     return (
-      <div className="bottom-button">
-          {emoji} Button
-      </div>
+        <button className="bottom-button" onClick={() => action()}>{emoji} Button</button>
     );
 }
 

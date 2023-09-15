@@ -3,7 +3,7 @@ import React from 'react'
 function AlpacaArt({ attr }) {
     const { bg, neck, nose, mouth, eyes, hair, leg, ears, accessories } = attr;
     return (
-        <div className='alpaca'>
+        <div id='alpaca'>
             <img src={bg} alt="Background" className="background" />
             <img src={neck} alt="Neck" className="neck" />
             <img src={nose} alt="Nose" className="nose" />
