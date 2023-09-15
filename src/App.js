@@ -1,12 +1,8 @@
-import Alpaca from './components/Alpaca';
-import './App.css';
+import Alpaca from "./components/Alpaca";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="container">
-      <Alpaca />
-    </div>
-  );
+  return <Alpaca />;
 }
 
 export default App;
