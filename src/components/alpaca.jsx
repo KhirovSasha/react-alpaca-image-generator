@@ -112,8 +112,8 @@ const Alpaca = () => {
                 <div className="left">
                     <AlpacaArt attr={alpacaAttr}/>
                     <div className="blockOfButtons">
-                        <Button action={()=> console.log(1)} emoji={'🔀'}/>
-                        <Button action={downloadImage} emoji={'🌄'}/>
+                        <Button action={()=> console.log(1)} emoji={'🔀'} name={'Random'}/>
+                        <Button action={downloadImage} emoji={'🌄'} name={'Download'}/>
                     </div>
                 </div>
                 <div className="right">
@@ -125,6 +125,9 @@ const Alpaca = () => {
                     </div>
                     <div className='styles'>
                         <h2>Style</h2>
+                        {feature.items.map(attribute => (
+                            <Style attribute={attribute} attributes={feature} changeImage={changeImage}/>
+                        ))}
                     </div>
                 </div>
             </div>
