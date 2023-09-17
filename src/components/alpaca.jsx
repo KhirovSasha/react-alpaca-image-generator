@@ -4,6 +4,8 @@ import {alpacaConfig} from "../utils/alpacaConfig";
 import {getImage} from "../utils/getImage";
 import  {downloadImage} from "../utils/downloadImage";
 import Button from "./Button";
+import Accessorize from "./Accessorize";
+import Style from "./Style";
 
 const Alpaca = () => {
     const [config, setConfig] = useState(alpacaConfig);
@@ -15,6 +17,7 @@ const Alpaca = () => {
     const [hair, setHair] = useState(null);
     const [leg, setLeg] = useState(null);
     const [ears, setEars] = useState(null);
+    const [feature, setFeature] = useState(config[0])
     const [accessories, setAccessories] = useState(null);
 
     const changeImage = (feature, attribute) => {
@@ -68,6 +71,15 @@ const Alpaca = () => {
         });
     };
 
+    const setFeatureItem = feature => {
+        const configClone = [...config]
+        const selectedIndex = configClone.indexOf(feature)
+        configClone.forEach(ft => (ft.selected = false))
+        configClone[selectedIndex].selected = true
+        setConfig(configClone)
+        setFeature(feature)
+    }
+
     useEffect(() => {
         const renderAlpaca = () => {
             config.forEach((feature) => {
@@ -107,6 +119,9 @@ const Alpaca = () => {
                 <div className="right">
                     <div className='accessoriesWindow'>
                         <h2>Accessorize the Alpaca's</h2>
+                        {config.map(attributes => (
+                            <Accessorize key={attributes.id} attributes={attributes} setFeatureItem={setFeatureItem} />
+                        ))}
                     </div>
                     <div className='styles'>
                         <h2>Style</h2>
