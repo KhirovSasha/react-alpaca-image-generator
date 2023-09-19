@@ -6,6 +6,7 @@ import  {downloadImage} from "../utils/downloadImage";
 import Button from "./Button";
 import Accessorize from "./Accessorize";
 import Style from "./Style";
+import {randomize} from "../utils/randomize";
 
 const Alpaca = () => {
     const [config, setConfig] = useState(alpacaConfig);
@@ -112,7 +113,7 @@ const Alpaca = () => {
                 <div className="left">
                     <AlpacaArt attr={alpacaAttr}/>
                     <div className="blockOfButtons">
-                        <Button action={()=> console.log(1)} emoji={'🔀'} name={'Random'}/>
+                        <Button action={randomize} random={[changeImage, config]} emoji={'🔀'} name={'Random'}/>
                         <Button action={downloadImage} emoji={'🌄'} name={'Download'}/>
                     </div>
                 </div>
@@ -126,7 +127,7 @@ const Alpaca = () => {
                     <div className='styles'>
                         <h2>Style</h2>
                         {feature.items.map(attribute => (
-                            <Style attribute={attribute} attributes={feature} changeImage={changeImage}/>
+                            <Style key={attribute.id} attribute={attribute} attributes={feature} changeImage={changeImage}/>
                         ))}
                     </div>
                 </div>
