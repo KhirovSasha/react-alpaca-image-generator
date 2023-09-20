@@ -105,5 +105,40 @@ h2 {
     outline: none;
     font-size: 1rem;
     line-height: 1.2;
+    cursor: pointer;
 }
 
+.btn:hover {
+    border: 1px solid rgb(85, 150, 246);
+    color: rgb(85, 150, 246);
+    font-weight: bold;
+}
+
+@media (max-width: 915px) {
+    .app {
+        padding-top: 24px;
+        row-gap: 16px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .right {
+        padding: 10px 64px;
+    }
+
+    .btn {
+        padding: 12px 32px;
+    }
+ }
+
+@media (max-width: 590px) {
+    .btn {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .right {
+        padding: 10px 50px;
+    }
+}
