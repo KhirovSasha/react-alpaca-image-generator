@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import AlpacaArt from "./AlpacaArt";
 import {alpacaConfig} from "../utils/alpacaConfig";
 import {getImage} from "../utils/getImage";
-import  {downloadImage} from "../utils/downloadImage";
+import {downloadImage} from "../utils/downloadImage";
 import Button from "./Button";
 import Accessorize from "./Accessorize";
 import Style from "./Style";
@@ -118,17 +118,23 @@ const Alpaca = () => {
                     </div>
                 </div>
                 <div className="right">
-                    <div className='accessoriesWindow'>
+                    <div className='accessoriesWindow blockOfContent'>
                         <h2>Accessorize the Alpaca's</h2>
-                        {config.map(attributes => (
-                            <Accessorize key={attributes.id} attributes={attributes} setFeatureItem={setFeatureItem} />
-                        ))}
+                        <div className='button-container'>
+                            {config.map(attributes => (
+                                <Accessorize key={attributes.id} attributes={attributes}
+                                             setFeatureItem={setFeatureItem}/>
+                            ))}
+                        </div>
                     </div>
-                    <div className='styles'>
+                    <div className='styles blockOfContent'>
                         <h2>Style</h2>
-                        {feature.items.map(attribute => (
-                            <Style key={attribute.id} attribute={attribute} attributes={feature} changeImage={changeImage}/>
-                        ))}
+                        <div className='button-container'>
+                            {feature.items.map(attribute => (
+                                <Style key={attribute.id} attribute={attribute} attributes={feature}
+                                       changeImage={changeImage}/>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

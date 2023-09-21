@@ -129,6 +129,12 @@ h2 {
     .btn {
         padding: 12px 32px;
     }
+
+    .blockOfContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
  }
 
 @media (max-width: 590px) {
@@ -141,4 +147,10 @@ h2 {
     .right {
         padding: 10px 50px;
     }
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
 }
