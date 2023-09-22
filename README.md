@@ -17,6 +17,7 @@ The Alpaca Image Generator comes with the following key features:
 
 ## Installation
 Follow these steps to set up the Alpaca Image Generator on your local machine:
-1. Clone this repository to your local system. <code>git clone https://github.com/KhirovSasha/react-alpaca-image-generator.git </code>
+1. Clone this repository to your local system. 
+<code>git clone https://github.com/KhirovSasha/react-alpaca-image-generator.git </code>
 2. Navigate to the project directory. <code>cd react-alpaca-image-generator</code>
 3. Launch the web page in the console. <code>npm run start</code>
